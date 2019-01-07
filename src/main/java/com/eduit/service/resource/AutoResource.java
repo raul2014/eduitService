@@ -14,6 +14,11 @@ public class AutoResource{
     public AutoResponse getAutoById(@PathVariable(name="id") Long id){
         return new AutoResponse(id, "Ford","VFX2",50000.0D);
     }
+
+    @GetMapping(path = "saludo", produces = "application/json")
+    public String getGrettings(){
+        return "Hello world from a web service REST hecho con SpringBoot!!";
+    }
 }
 
 
